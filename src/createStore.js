@@ -16,6 +16,8 @@ export default function createStore(reducer) {
   return {dispatch, getState};
 }
 
+let store = createStore(candyReducer);
+
 function render() {
   const container = document.getElementById('container');
   container.textContent = store.getState()
